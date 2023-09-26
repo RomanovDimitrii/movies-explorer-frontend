@@ -19,7 +19,12 @@ function AboutMe() {
             петь в&nbsp;караоке, играть в&nbsp;квизы.
           </p>
 
-          <a class="about-me__link" href="https://github.com/RomanovDimitrii">
+          <a
+            className="about-me__link"
+            href="https://github.com/RomanovDimitrii"
+            target="_blank"
+            rel="noreferrer"
+          >
             Github
           </a>
         </div>

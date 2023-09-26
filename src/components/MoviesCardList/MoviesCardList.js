@@ -13,51 +13,94 @@ function MoviesCardList({ savedMoviesList }) {
   if (savedMoviesList) {
     return (
       <section className="movies-card-list">
-        <section className="movies-card-list__grid">
-          <MoviesCard
-            movie={movie1}
-            isLiked={true}
-            shownInSavedMoviesList={true}
-            title="В погоне за Бенкси"
-            duration="0ч 42м"
-          />
-          <MoviesCard
-            movie={movie2}
-            isLiked={true}
-            shownInSavedMoviesList={true}
-            title="В погоне за Бенкси"
-            duration="0ч 42м"
-          />
-          <MoviesCard
-            movie={movie3}
-            isLiked={true}
-            shownInSavedMoviesList={true}
-            title="В погоне за Бенкси"
-            duration="0ч 42м"
-          />
-        </section>
+        <ul className="movies-card-list__grid">
+          <li>
+            <MoviesCard
+              movie={movie1}
+              isLiked={true}
+              shownInSavedMoviesList={true}
+              title="В погоне за Бенкси"
+              duration="0ч 42м"
+            />
+          </li>
+
+          <li>
+            <MoviesCard
+              movie={movie2}
+              isLiked={true}
+              shownInSavedMoviesList={true}
+              title="В погоне за Бенкси"
+              duration="0ч 42м"
+            />
+          </li>
+
+          <li>
+            <MoviesCard
+              movie={movie3}
+              isLiked={true}
+              shownInSavedMoviesList={true}
+              title="В погоне за Бенкси"
+              duration="0ч 42м"
+            />
+          </li>
+        </ul>
       </section>
     );
   }
 
   return (
     <section className="movies-card-list">
-      <section className="movies-card-list__grid">
-        <MoviesCard movie={movie1} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
-        <MoviesCard movie={movie2} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
-        <MoviesCard movie={movie3} isLiked={false} title="В погоне за Бенкси" duration="0ч 42м" />
-        <MoviesCard movie={movie4} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
-        <MoviesCard movie={movie5} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
-        <MoviesCard movie={movie6} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
-        <MoviesCard movie={movie1} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
-        <MoviesCard movie={movie2} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
-        <MoviesCard movie={movie3} isLiked={false} title="В погоне за Бенкси" duration="0ч 42м" />
-        <MoviesCard movie={movie4} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
-        <MoviesCard movie={movie5} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
-        <MoviesCard movie={movie6} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
-      </section>
-      <button className="movies-card-list__button">
-        <p className="movies-card-list__button-text">Ещё</p>
+      <ul className="movies-card-list__grid">
+        <li>
+          <MoviesCard movie={movie1} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
+        </li>
+
+        <li>
+          <MoviesCard movie={movie2} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
+        </li>
+
+        <li>
+          <MoviesCard movie={movie3} isLiked={false} title="В погоне за Бенкси" duration="0ч 42м" />
+        </li>
+
+        <li>
+          <MoviesCard movie={movie4} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
+        </li>
+
+        <li>
+          <MoviesCard movie={movie5} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
+        </li>
+
+        <li>
+          <MoviesCard movie={movie6} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
+        </li>
+
+        <li>
+          <MoviesCard movie={movie1} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
+        </li>
+
+        <li>
+          <MoviesCard movie={movie2} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
+        </li>
+
+        <li>
+          <MoviesCard movie={movie3} isLiked={false} title="В погоне за Бенкси" duration="0ч 42м" />
+        </li>
+
+        <li>
+          <MoviesCard movie={movie4} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
+        </li>
+
+        <li>
+          <MoviesCard movie={movie5} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
+        </li>
+
+        <li>
+          <MoviesCard movie={movie6} isLiked={true} title="В погоне за Бенкси" duration="0ч 42м" />
+        </li>
+      </ul>
+      <button className="movies-card-list__button" type="button">
+        <span className="movies-card-list__button-text">Ещё</span>
       </button>
     </section>
   );

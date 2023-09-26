@@ -37,10 +37,10 @@ function App() {
   }
 
   return (
-    <main className="App">
+    <body className="app">
       <Routes>
-        {/* <Route path="/sign-up" element={<Register />} /> */}
-        <Route path="/sign-in" element={<Login />} />
+        <Route path="/signup" element={<Register />} />
+        <Route path="/signin" element={<Login />} />
         <Route path="/" element={<Main />} />
         <Route
           path="/movies"
@@ -72,11 +72,9 @@ function App() {
             />
           }
         />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </main>
+    </body>
   );
 }
 

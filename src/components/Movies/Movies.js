@@ -15,8 +15,11 @@ function Movies({ isMenuOpen, onCloseMenu, onMenu }) {
         onMenu={onMenu}
         onCloseMenu={onCloseMenu}
       />
-      <SearchForm />
-      <MoviesCardList />
+      <main>
+        <SearchForm />
+        <MoviesCardList />
+      </main>
+
       <Footer />
     </>
   );

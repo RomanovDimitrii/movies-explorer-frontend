@@ -15,8 +15,11 @@ function SavedMovies({ isMenuOpen, onCloseMenu, onMenu }) {
         onMenu={onMenu}
         onCloseMenu={onCloseMenu}
       />
-      <SearchForm />
-      <MoviesCardList savedMoviesList={true} />
+      <main>
+        <SearchForm />
+        <MoviesCardList savedMoviesList={true} />
+      </main>
+
       <Footer />
     </>
   );

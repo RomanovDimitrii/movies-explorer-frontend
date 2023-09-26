@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: start;
   background-color: #202020;
-  padding: 70px 442px 0;
+  padding: 70px 34.5vw 0;
 }
 
 .form__logo {
@@ -11,6 +11,11 @@
   width: 38px;
   height: 38px;
   object-fit: cover;
+}
+
+.form__logo:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .form__title {
@@ -26,14 +31,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 410px;
 }
 
 .form__input-block {
   flex-direction: column;
   display: flex;
   width: 100%;
-  align-items: start;
+  align-items: flex-start;
   margin-top: 10px;
 }
 
@@ -106,7 +110,7 @@
 
 .form__emty-block {
   display: block;
-  height: 78px;
+  height: 66px;
 }
 
 .form__nav-text_blue:hover {
@@ -134,7 +138,7 @@
   }
 
   .form__emty-block {
-    height: 79px;
+    height: 67px;
   }
 
   .form__nav-block {

@@ -4,7 +4,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import closeButtonImage from '../../images/ClosePopupImage.svg';
-import accIcon from '../../images/icon-accaunt.png';
+import accIcon from '../../images/icon-accaunt.svg';
 import './Menu.css';
 
 function Menu({ isMenuOpen, onCloseMenu }) {
@@ -12,6 +12,7 @@ function Menu({ isMenuOpen, onCloseMenu }) {
 
   function handleAccountButton() {
     navigate('/profile', { replace: true });
+    onCloseMenu();
   }
 
   function handleMainButton() {
@@ -20,10 +21,12 @@ function Menu({ isMenuOpen, onCloseMenu }) {
 
   function handleMoviesButton() {
     navigate('/movies', { replace: true });
+    onCloseMenu();
   }
 
   function handleSavedMoviesButton() {
     navigate('/saved-movies', { replace: true });
+    onCloseMenu();
   }
 
   return (
@@ -44,7 +47,7 @@ function Menu({ isMenuOpen, onCloseMenu }) {
           </li>
         </ul>
         <button className="menu__button-account" type="button" onClick={handleAccountButton}>
-          <p className="menu__text-menu">Аккаунт</p>
+          <span className="menu__text-menu">Аккаунт</span>
           <div className="menu__acc-image">
             <img className="menu__acc-icon" src={accIcon} alt="Иконка профиля" />
           </div>

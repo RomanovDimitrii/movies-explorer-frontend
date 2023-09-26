@@ -9,6 +9,9 @@
   row-gap: 32px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, min-content);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .movies-card-list__button {

@@ -17,6 +17,11 @@
   object-fit: cover;
 }
 
+.navigation__logo:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
 .navigation__nav-block {
   display: flex;
   align-items: center;
@@ -109,8 +114,14 @@
   display: none;
   width: 44px;
   height: 44px;
-  object-fit: cover;
+  outline: none;
   margin: 15px 30px 15px 0;
+  background-color: transparent;
+  border: none;
+}
+
+.navigation__burger-image {
+  object-fit: cover;
 }
 
 @media screen and (max-width: 1050px) {

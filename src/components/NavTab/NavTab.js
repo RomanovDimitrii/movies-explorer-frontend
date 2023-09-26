@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import logo from '../../images/logo.png';
-import accIcon from '../../images/icon-accaunt.png';
+import accIcon from '../../images/icon-accaunt.svg';
 import burger from '../../images/burger.svg';
 import './NavTab.css';
 import Menu from '../Menu/Menu';
@@ -14,12 +14,16 @@ function NavTab({ schemeBlue, isLoggedIn, isMenuOpen, onMenu, onCloseMenu }) {
     navigate('/profile', { replace: true });
   }
 
+  function handleMainButton() {
+    navigate('/', { replace: true });
+  }
+
   function handleRegisterButton() {
-    navigate('/register', { replace: true });
+    navigate('/signup', { replace: true });
   }
 
   function handleLoginButton() {
-    navigate('/login', { replace: true });
+    navigate('/signin', { replace: true });
   }
 
   function handleMoviesButton() {
@@ -32,10 +36,10 @@ function NavTab({ schemeBlue, isLoggedIn, isMenuOpen, onMenu, onCloseMenu }) {
 
   return (
     <>
-      <section className={`navigation ${schemeBlue ? 'navigation_style_blue' : ''}`}>
+      <header className={`navigation ${schemeBlue ? 'navigation_style_blue' : ''}`}>
         <Menu isMenuOpen={isMenuOpen} onCloseMenu={onCloseMenu} />
-        <img className="navigation__logo" src={logo} alt="Логотип" />
-        <div className="navigation__nav-block">
+        <img className="navigation__logo" src={logo} alt="Логотип" onClick={handleMainButton} />
+        <nav className="navigation__nav-block">
           {!isLoggedIn && (
             <p className="navigation__text" onClick={handleRegisterButton}>
               Регистрация
@@ -43,9 +47,9 @@ function NavTab({ schemeBlue, isLoggedIn, isMenuOpen, onMenu, onCloseMenu }) {
           )}
           {!isLoggedIn && (
             <button className="navigation__button" type="button">
-              <p className="navigation-button-text" onClick={handleLoginButton}>
+              <span className="navigation-button-text" onClick={handleLoginButton}>
                 Войти
-              </p>
+              </span>
             </button>
           )}
           {isLoggedIn && (
@@ -62,22 +66,20 @@ function NavTab({ schemeBlue, isLoggedIn, isMenuOpen, onMenu, onCloseMenu }) {
             </p>
           )}
           {isLoggedIn && (
-            <button
-              className="navigation__button-account"
-              type="button"
-              onClick={handleAccountButton}
-            >
+            <div className="navigation__button-account" onClick={handleAccountButton}>
               <p className="navigation__text-menu">Аккаунт</p>
               <div className="navigation__acc-image">
                 <img className="navigation__acc-icon" src={accIcon} alt="Иконка профиля" />
               </div>
-            </button>
+            </div>
           )}
           {isLoggedIn && (
-            <img className="navigation__burger" src={burger} alt="Меню" onClick={onMenu} />
+            <button className="navigation__burger" type="button">
+              <img className="navigation__burger-image" src={burger} alt="Меню" onClick={onMenu} />
+            </button>
           )}
-        </div>
-      </section>
+        </nav>
+      </header>
     </>
   );
 }

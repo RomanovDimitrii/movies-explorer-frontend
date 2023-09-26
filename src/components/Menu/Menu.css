@@ -64,12 +64,22 @@
   border-bottom: #fff solid 2px;
 }
 
+.menu__link:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 .menu__button-account {
   margin: 607px auto 92px;
   display: flex;
   background-color: transparent;
   border: none;
   align-items: center;
+}
+
+.menu__button-account:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .menu__text-menu {

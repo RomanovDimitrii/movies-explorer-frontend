@@ -31,6 +31,10 @@
   outline: none;
 }
 
+.search-form__input:focus {
+  border-bottom: #4285f4 1px solid;
+}
+
 .search-form__submit-button {
   width: 112px;
   height: 52px;

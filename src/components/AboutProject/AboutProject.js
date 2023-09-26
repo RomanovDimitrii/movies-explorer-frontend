@@ -21,14 +21,14 @@ function AboutProject() {
         </h3>
       </div>
       <div className="about__grid-section about__grid-section_style_graph">
-        <h3 className="about__grid-section-graph-text about__grid-section-graph-text_style_geen-black ">
+        <p className="about__grid-section-graph-text about__grid-section-graph-text_style_geen-black ">
           1 неделя
-        </h3>
-        <h3 className="about__grid-section-graph-text about__grid-section-graph-text_style_gray-white">
+        </p>
+        <p className="about__grid-section-graph-text about__grid-section-graph-text_style_gray-white">
           4 недели
-        </h3>
-        <h3 className="about__grid-section-graph-text ">Back-end</h3>
-        <h3 className="about__grid-section-graph-text ">Front-end</h3>
+        </p>
+        <p className="about__grid-section-graph-text ">Back-end</p>
+        <p className="about__grid-section-graph-text ">Front-end</p>
       </div>
     </section>
   );

@@ -5,10 +5,10 @@ import './FilterCheckbox.css';
 
 function Filtercheckbox() {
   return (
-    <section className="filter-checkbox">
+    <div className="filter-checkbox">
       <img className="filter-checkbox__image" src={checkBox} alt="Чекбокс" />
       <p className="filter-checkbox__text">Короткометражки</p>
-    </section>
+    </div>
   );
 }
 
