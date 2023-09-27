@@ -1,0 +1,131 @@
+.menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.2s, opacity 0.2s ease-in;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.menu_opened {
+  opacity: 1;
+  visibility: visible;
+  z-index: 3;
+}
+
+.menu__container {
+  width: 67vw;
+  height: 100vh;
+  background-color: #202020;
+  position: relative;
+}
+
+.menu__close-button {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.menu__close-button-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu__nav-block {
+  list-style-type: none;
+  margin: 131px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.menu__link {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #fff;
+  margin: 31px 0 0;
+}
+
+.menu__link_underlined {
+  display: inline;
+  border-bottom: #fff solid 2px;
+}
+
+.menu__link:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.menu__button-account {
+  margin: 607px auto 92px;
+  display: flex;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+}
+
+.menu__button-account:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.menu__text-menu {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #fff;
+}
+
+.menu__acc-image {
+  width: 30px;
+  height: 30px;
+  background-color: #313131;
+  border-radius: 6px;
+  margin-left: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__acc-icon {
+  width: 10.4px;
+  height: 10.7px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 500px) {
+  .menu__container {
+    width: 100vw;
+  }
+
+  .menu__close-button {
+    top: 15px;
+    right: 15px;
+  }
+
+  .menu__nav-block {
+    margin: 121px 0 0;
+  }
+
+  .menu__link {
+    line-height: 31px;
+    margin: 18px 0 0px;
+  }
+
+  .menu__button-account {
+    margin: 425px auto 92px;
+  }
+}
