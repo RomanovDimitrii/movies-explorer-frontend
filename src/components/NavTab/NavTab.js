@@ -7,7 +7,7 @@ import burger from '../../images/burger.svg';
 import './NavTab.css';
 import Menu from '../Menu/Menu';
 
-function NavTab({ schemeBlue, isLoggedIn, isMenuOpen, onMenu, onCloseMenu }) {
+function NavTab({ isLoggedIn, isMenuOpen, onMenu, onCloseMenu, isHeaderBlue, currentPage }) {
   const navigate = useNavigate();
 
   function handleAccountButton() {
@@ -36,8 +36,8 @@ function NavTab({ schemeBlue, isLoggedIn, isMenuOpen, onMenu, onCloseMenu }) {
 
   return (
     <>
-      <header className={`navigation ${schemeBlue ? 'navigation_style_blue' : ''}`}>
-        <Menu isMenuOpen={isMenuOpen} onCloseMenu={onCloseMenu} />
+      <header className={`navigation ${isHeaderBlue ? 'navigation_style_blue' : ''}`}>
+        <Menu isMenuOpen={isMenuOpen} onCloseMenu={onCloseMenu} currentPage={currentPage} />
         <img className="navigation__logo" src={logo} alt="Логотип" onClick={handleMainButton} />
         <nav className="navigation__nav-block">
           {!isLoggedIn && (

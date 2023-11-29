@@ -37,6 +37,11 @@
   padding: 0;
 }
 
+.menu__close-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 .menu__close-button-image {
   width: 100%;
   object-fit: cover;

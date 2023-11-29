@@ -6,7 +6,7 @@ import './NotFound.css';
 function NotFound() {
   const navigate = useNavigate();
   function handleBtn() {
-    navigate(-1);
+    navigate(-4);
   }
 
   return (

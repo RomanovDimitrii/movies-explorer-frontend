@@ -7,9 +7,11 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
+    "react-cookie": "^6.1.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "use-resize": "^1.0.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -17,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && scp -r ./build/* dimitrii@158.160.33.96:/home/dimitrii/mestofrontend"
+    "deploy": "npm run build && scp -r ./build/* dimitrii@158.160.122.239:/home/dimitrii/movies-explorer-frontend"
   },
   "eslintConfig": {
     "extends": [

@@ -81,7 +81,7 @@
 }
 
 .navigation__button-account {
-  margin: 21px 5vw 23px 44px;
+  margin: 25px 5vw 23px 44px;
   display: flex;
   background-color: transparent;
   border: none;
@@ -118,6 +118,11 @@
   margin: 15px 30px 15px 0;
   background-color: transparent;
   border: none;
+}
+
+.navigation__burger:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 .navigation__burger-image {
