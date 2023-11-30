@@ -5,6 +5,3 @@ api.dimitrii.movies.nomoredomainsicu.ru
 
 Фронтенд IP 158.160.122.239
 dimitrii.movies.nomoredomainsicu.ru
-
-cohort-65
-токен: 28e66ce0-e1c0-46c6-ba61-67192a6d327c

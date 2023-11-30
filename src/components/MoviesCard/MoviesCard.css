@@ -52,10 +52,6 @@
   border: none;
 }
 
-.movies-card__button_liked {
-  background-color: #ff3055;
-}
-
 .movies-card__button_saved {
   background-color: #313131;
 }
@@ -99,4 +95,8 @@
     border-radius: 30px;
     border: none;
   }
+}
+
+.movies-card__button_liked {
+  background-color: #ff3055;
 }
