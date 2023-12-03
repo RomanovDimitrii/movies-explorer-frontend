@@ -6,4 +6,4 @@ api.dimitrii.movies.nomoredomainsicu.ru
 Фронтенд IP 158.160.122.239
 dimitrii.movies.nomoredomainsicu.ru
 
-Pull request https://github.com/RomanovDimitrii/movies-explorer-frontend/pull/3
+Pull request https://github.com/RomanovDimitrii/movies-explorer-frontend/pull/4
