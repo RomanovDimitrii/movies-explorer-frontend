@@ -21,24 +21,28 @@ export function useFormWithValidation() {
   const [isValid, setIsValid] = React.useState(false);
 
   const handleChange = event => {
+    // let isEmailNotCorrect = false;
     const target = event.target;
     const name = target.name;
     const value = target.value;
     setValues({ ...values, [name]: value });
     setErrors({ ...errors, [name]: target.validationMessage });
-    setIsValid(target.closest('form').checkValidity());
+
     if (name === 'email') {
-      if (isEmailValid(value)) {
-        setErrors({ ...errors, [name]: '' });
-      } else {
-        setErrors({ ...errors, [name]: 'некорректный email' });
-      }
+      isEmailValid(value);
     }
+
+    setIsValid(target.closest('form').checkValidity());
   };
 
   function isEmailValid(value) {
     const regexEmail = /\w+@\w+\.\w+/;
-    return regexEmail.test(value);
+    // return regexEmail.test(value);
+    if (regexEmail.test(value)) {
+      setErrors({ ...errors, email: '' });
+    } else {
+      setErrors({ ...errors, email: 'некорректный email' });
+    }
   }
 
   const resetForm = useCallback(

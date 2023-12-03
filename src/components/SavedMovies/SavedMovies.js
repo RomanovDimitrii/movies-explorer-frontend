@@ -5,6 +5,7 @@ import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Footer from '../Footer/Footer';
 import Preloader from '../Preloader/Preloader';
+import { SHORT_MOVIES_DURATION } from '../utils/constants';
 
 function SavedMovies({
   isMenuOpen,
@@ -23,7 +24,7 @@ function SavedMovies({
 
   function handleShortMoviesList(moviesList) {
     return moviesList.filter(function (moviesItem) {
-      return moviesItem.duration < 40;
+      return moviesItem.duration < SHORT_MOVIES_DURATION;
     });
   }
 

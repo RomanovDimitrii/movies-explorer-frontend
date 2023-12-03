@@ -5,6 +5,7 @@ import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Footer from '../Footer/Footer';
 import Preloader from '../Preloader/Preloader';
+import { SHORT_MOVIES_DURATION } from '../utils/constants';
 
 function Movies({
   isMenuOpen,
@@ -22,6 +23,7 @@ function Movies({
   const [moviesList, setMoviesList] = useState(null);
   const [moviesListError, setMoviesListError] = useState('');
   const [isMoviesPreloaderShown, setIsMoviesPreloaderShown] = useState(false);
+  const [savedSearchFormValue, setSavedSearchFormValue] = useState('');
 
   React.useEffect(() => {
     setIsMoviesPreloaderShown(true);
@@ -37,6 +39,7 @@ function Movies({
 
       return;
     }
+    setSavedSearchFormValue(searchValue);
 
     const filteredMoviesList = moviesData.filter(function (moviesItem) {
       return (
@@ -65,7 +68,7 @@ function Movies({
       //  чекбокс включен
 
       shortMovies = filteredAndLikedMoviesList.filter(function (moviesItem) {
-        return moviesItem.duration < 40;
+        return moviesItem.duration < SHORT_MOVIES_DURATION;
       });
 
       if (shortMovies.length) {
@@ -91,7 +94,6 @@ function Movies({
           moviesItem.isLiked = true;
           moviesItem._id = savedMovieItem._id;
         }
-        //   return moviesItem;
       });
 
       return moviesItem;
@@ -116,6 +118,7 @@ function Movies({
           searchFormValue={setSearchFormValue}
           isMoviesPreloaderShown={setIsMoviesPreloaderShown}
           getMovies={getMovies}
+          savedSearchFormValue={savedSearchFormValue}
         />
 
         <MoviesCardList

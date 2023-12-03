@@ -47,7 +47,12 @@ function App() {
         }
         setCurrentUserInfo(data);
         setIsLoggedIn(true);
-        navigate(location.pathname);
+
+        if (location.pathname === '/signin' || location.pathname === '/signup') {
+          navigate('/');
+        } else {
+          navigate(location.pathname);
+        }
       })
       .catch(e => {
         setIsLoggedIn(false);
@@ -203,11 +208,13 @@ function App() {
           setIsInfoPopupOpen(true);
           setIsProcessSuccessful(true);
           setInfoPopupMessage('Регистрация прошла успешно!');
-          navigate('/signin', { replace: true });
+
+          handleAuth(values);
+          //setIsLoggedIn(true);
+          //navigate('/signin', { replace: true });
         }
       })
       .catch(err => {
-        //  setErrorMessage(err);
         setIsInfoPopupOpen(true);
         setIsProcessSuccessful(false);
         if (err.includes('409')) {

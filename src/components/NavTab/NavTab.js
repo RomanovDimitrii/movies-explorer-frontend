@@ -53,13 +53,20 @@ function NavTab({ isLoggedIn, isMenuOpen, onMenu, onCloseMenu, isHeaderBlue, cur
             </button>
           )}
           {isLoggedIn && (
-            <p className="navigation__text-menu" onClick={handleMoviesButton}>
+            <p
+              className={`navigation__text-menu ${
+                currentPage === 'movies' ? 'navigation__text-menu_active' : ''
+              }`}
+              onClick={handleMoviesButton}
+            >
               Фильмы
             </p>
           )}
           {isLoggedIn && (
             <p
-              className="navigation__text-menu navigation__text-menu_saved-films"
+              className={`navigation__text-menu ${
+                currentPage === 'savedMovies' ? 'navigation__text-menu_active' : ''
+              }`}
               onClick={handleSavedMoviesButton}
             >
               Сохраненные фильмы

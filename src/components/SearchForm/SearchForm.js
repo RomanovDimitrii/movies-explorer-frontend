@@ -2,7 +2,13 @@ import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 import { useFormWithValidation } from '../utils/validation.js';
 import './SearchForm.css';
 
-function SearchForm({ isShortMoviesCheckboxOn, searchFormValue, savedMoviesPage, getMovies }) {
+function SearchForm({
+  isShortMoviesCheckboxOn,
+  searchFormValue,
+  savedMoviesPage,
+  getMovies,
+  savedSearchFormValue
+}) {
   const { values, handleChange, errors, isValid } = useFormWithValidation({});
 
   function handleSubmit(e) {
@@ -36,6 +42,7 @@ function SearchForm({ isShortMoviesCheckboxOn, searchFormValue, savedMoviesPage,
             maxLength="30"
             onChange={handleChange}
             formNoValidate
+            defaultValue={savedSearchFormValue}
           />
           <button
             className={`search-form__submit-button ${

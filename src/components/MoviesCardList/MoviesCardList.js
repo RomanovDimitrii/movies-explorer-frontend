@@ -3,6 +3,14 @@ import { useResize } from '../utils/useResize';
 
 import MoviesCard from '../MoviesCard/MoviesCard';
 import './MoviesCardList.css';
+import {
+  AMOUNT_OF_SHOWN_MOVIES_SCREEN_LG,
+  AMOUNT_OF_MOVIES_TO_ADD_SCREEN_LG,
+  AMOUNT_OF_SHOWN_MOVIES_SCREEN_MED,
+  AMOUNT_MOVIES_TO_ADD_SCREEN_MED,
+  AMOUNT_OF_SHOWN_MOVIES_SCREEN_SMALL,
+  AMOUNT_OF_MOVIES_TO_ADD_SCREEN_SMALL
+} from '../utils/constants.js';
 
 function MoviesCardList({
   moviesList,
@@ -33,11 +41,15 @@ function MoviesCardList({
         <span className="movies-card-list__error">{moviesListError}</span>
       </section>
     );
+  } else if (savedMoviesPage) {
+    shownMoviesList = moviesList;
+    showMoreButton = false;
   } else {
     if (isScreenLg) {
-      if (moviesList.length > 12) {
+      if (moviesList.length > AMOUNT_OF_SHOWN_MOVIES_SCREEN_LG) {
         showMoreButton = true;
-        amountOfShownMovies = 12 + moreButtonClicked * 3;
+        amountOfShownMovies =
+          AMOUNT_OF_SHOWN_MOVIES_SCREEN_LG + moreButtonClicked * AMOUNT_OF_MOVIES_TO_ADD_SCREEN_LG;
         shownMoviesList = moviesList.slice(0, amountOfShownMovies);
 
         if (amountOfShownMovies >= moviesList.length) {
@@ -50,9 +62,10 @@ function MoviesCardList({
     }
 
     if (!isScreenLg && isScreenMd) {
-      if (moviesList.length > 8) {
+      if (moviesList.length > AMOUNT_OF_SHOWN_MOVIES_SCREEN_MED) {
         showMoreButton = true;
-        amountOfShownMovies = 8 + moreButtonClicked * 2;
+        amountOfShownMovies =
+          AMOUNT_OF_SHOWN_MOVIES_SCREEN_MED + moreButtonClicked * AMOUNT_MOVIES_TO_ADD_SCREEN_MED;
         shownMoviesList = moviesList.slice(0, amountOfShownMovies);
 
         if (amountOfShownMovies >= moviesList.length) {
@@ -65,9 +78,11 @@ function MoviesCardList({
     }
 
     if (!isScreenMd) {
-      if (moviesList.length > 5) {
+      if (moviesList.length > AMOUNT_OF_SHOWN_MOVIES_SCREEN_SMALL) {
         showMoreButton = true;
-        amountOfShownMovies = 5 + moreButtonClicked * 2;
+        amountOfShownMovies =
+          AMOUNT_OF_SHOWN_MOVIES_SCREEN_SMALL +
+          moreButtonClicked * AMOUNT_OF_MOVIES_TO_ADD_SCREEN_SMALL;
 
         shownMoviesList = moviesList.slice(0, amountOfShownMovies);
         if (amountOfShownMovies >= moviesList.length) {

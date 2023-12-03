@@ -14,7 +14,6 @@ function Form({
   route,
   questionText,
   navText,
-  //isLoggedIn,
   isInfoPopupOpen,
   infoPopupMessage,
   onCloseInfoPopup,
@@ -23,7 +22,6 @@ function Form({
   isProcessSuccessful,
   isPreloaderShown
 }) {
-  // const [inputValues, setInputValues] = useState({});
   const { values, handleChange, errors, isValid } = useFormWithValidation({});
 
   const navigate = useNavigate();
@@ -123,9 +121,11 @@ function Form({
           {name === 'login' && <div className="form__emty-block"></div>}
 
           <button
-            className={`form__submit-button ${!isValid ? 'form__submit-button_disabled' : ''}`}
+            className={`form__submit-button ${
+              !(isValid && !errors.email) ? 'form__submit-button_disabled' : ''
+            }`}
             type="submit"
-            disabled={!isValid}
+            disabled={!(isValid && !errors.email)}
           >
             {btnText}
           </button>
