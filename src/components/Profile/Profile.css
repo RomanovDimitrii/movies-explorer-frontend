@@ -60,6 +60,16 @@
   outline: #4285f4 1px solid;
 }
 
+.profile__input-error {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 11px;
+  color: #ee3465;
+  margin: 0px 0 0;
+  display: block;
+  min-height: 12px;
+}
+
 .profile__submit-button {
   background-color: #202020;
   border: none;
@@ -138,4 +148,17 @@
   .profile__nav-block {
     margin: 18px auto 269px;
   }
+}
+
+.profile__input_red-text {
+  color: #ee3465;
+}
+
+.profile__submit-button_disabled {
+  color: #8b8b8b;
+}
+
+.profile__submit-button_disabled:hover {
+  opacity: 1;
+  cursor: auto;
 }

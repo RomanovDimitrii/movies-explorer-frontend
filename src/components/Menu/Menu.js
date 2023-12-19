@@ -7,7 +7,7 @@ import closeButtonImage from '../../images/ClosePopupImage.svg';
 import accIcon from '../../images/icon-accaunt.svg';
 import './Menu.css';
 
-function Menu({ isMenuOpen, onCloseMenu }) {
+function Menu({ isMenuOpen, onCloseMenu, currentPage }) {
   const navigate = useNavigate();
 
   function handleAccountButton() {
@@ -17,6 +17,7 @@ function Menu({ isMenuOpen, onCloseMenu }) {
 
   function handleMainButton() {
     navigate('/', { replace: true });
+    onCloseMenu();
   }
 
   function handleMoviesButton() {
@@ -36,13 +37,22 @@ function Menu({ isMenuOpen, onCloseMenu }) {
           <img className="menu__close-button-image" src={closeButtonImage} alt="закрыть меню" />
         </button>
         <ul className="menu__nav-block">
-          <li className="menu__link" onClick={handleMainButton}>
+          <li
+            className={`menu__link ${currentPage === 'main' ? 'menu__link_underlined' : ''}`}
+            onClick={handleMainButton}
+          >
             Главная
           </li>
-          <li className="menu__link menu__link_underlined" onClick={handleMoviesButton}>
+          <li
+            className={`menu__link ${currentPage === 'movies' ? 'menu__link_underlined' : ''}`}
+            onClick={handleMoviesButton}
+          >
             Фильмы
           </li>
-          <li className="menu__link" onClick={handleSavedMoviesButton}>
+          <li
+            className={`menu__link ${currentPage === 'savedMovies' ? 'menu__link_underlined' : ''}`}
+            onClick={handleSavedMoviesButton}
+          >
             Сохраненные фильмы
           </li>
         </ul>

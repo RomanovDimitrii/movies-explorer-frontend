@@ -2,9 +2,14 @@ import React from 'react';
 
 import Form from '../Form/Form';
 
-function Register() {
-  // const [isLoggedIn, setIsLoggedIn] = React.useState(false);
-
+function Register({
+  isInfoPopupOpen,
+  onCloseInfoPopup,
+  infoPopupMessage,
+  handleRegister,
+  isProcessSuccessful,
+  isPreloaderShown
+}) {
   return (
     <main>
       <Form
@@ -14,6 +19,12 @@ function Register() {
         route="/signin"
         navText="Войти"
         questionText="Уже зарегистрированы?"
+        isInfoPopupOpen={isInfoPopupOpen}
+        infoPopupMessage={infoPopupMessage}
+        onCloseInfoPopup={onCloseInfoPopup}
+        handleRegister={handleRegister}
+        isProcessSuccessful={isProcessSuccessful}
+        isPreloaderShown={isPreloaderShown}
       />
     </main>
   );

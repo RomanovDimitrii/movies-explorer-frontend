@@ -9,17 +9,26 @@ import Portfolio from '../Portfolio/Portfolio';
 import Footer from '../Footer/Footer';
 import './Main.css';
 
-function Main() {
+function Main({ isMenuOpen, onCloseMenu, onMenu, isLoggedIn }) {
   return (
-    <main className="main">
-      <NavTab schemeBlue={true} isLoggedIn={false} />
-      <Promo />
-      <AboutProject />
-      <Techs />
-      <AboutMe />
-      <Portfolio />
+    <>
+      <NavTab
+        isLoggedIn={isLoggedIn}
+        isHeaderBlue={true}
+        isMenuOpen={isMenuOpen}
+        onMenu={onMenu}
+        onCloseMenu={onCloseMenu}
+        currentPage="main"
+      />
+      <main className="main">
+        <Promo />
+        <AboutProject />
+        <Techs />
+        <AboutMe />
+        <Portfolio />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
 
