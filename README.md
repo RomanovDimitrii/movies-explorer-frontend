@@ -1,9 +1,13 @@
-Макет dark-4 https://www.figma.com/file/hQm8gwrVbcY97BNbglim4E/light-1?type=design&node-id=1-9662&mode=dev
+# Проект Movies-explorer
 
-Бэкенд IP 158.160.122.239
-api.dimitrii.movies.nomoredomainsicu.ru
+ **Реализован функционал:**
+ - загрузка данных по фильмам с внешнего сервера 
+ - поиск фильмов
+ - регистрация/авторизация/аутентификация (через cookies) пользователя
+ - хранение фильмов, избранных фильмов, результатов поиска в local storage
+ - добавление фильма в избранное
+ - открытие ссылки с видео
 
-Фронтенд IP 158.160.122.239
-dimitrii.movies.nomoredomainsicu.ru
 
-Pull request https://github.com/RomanovDimitrii/movies-explorer-frontend/pull/4
+
+**Инструменты и стек:** <pre> React  JavaScript  HTML  CSS   NPM  API  </pre>
